@@ -1,28 +1,37 @@
-public class U1 extends Rocket{
+public class U1 extends Rocket {
 
-    int costU1 = 100;
-    int weightU1 = 10000; //in kg - the same unit of measure as weight of equipment in txt files
-    int maxWeightU1 = 18000;
-    double random = Math.random();
+    double random = (Math.random()*10000)+1;
     double chanceOfExplosion;
     double chanceOfCrash;
 
+    public U1() {
+        this.rocketCurrentWeight = 10000;
+        this.maxWeight = 18000;  //in kg - the same unit of measure as weight of equipment in txt files
+        this.weight = 10000;
+        this.cost = 100;
+    }
+
     @Override
     public boolean launch() {
-        chanceOfExplosion = 0.05*((double) weightU1 + Item.getWeight()/(double) maxWeightU1);
-        if(chanceOfExplosion<=random){
+        chanceOfExplosion = 0.05 * ((double) rocketCurrentWeight - weight / (double) maxWeight - weight);
+        boolean result = chanceOfExplosion <= random;
+        System.out.println("result = " + result);
+        System.out.println("chanceOfExplosion = " + chanceOfExplosion);
+        System.out.println("random = " + random);
+        System.out.println();
+        if (result) {
             return true;
-        }else {
+        } else {
             return false; //exploded
         }
     }
 
     @Override
     public boolean land() {
-        chanceOfCrash = 0.01*((double) weightU1 + Item.getWeight()/(double) maxWeightU1);
-        if(chanceOfCrash<=random){
+        chanceOfCrash = 0.01 * ((double) rocketCurrentWeight - weight / (double) maxWeight - weight);
+        if (chanceOfCrash <= random) {
             return true;
-        }else {
+        } else {
             return false; //crash
         }
     }
