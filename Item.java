@@ -9,11 +9,11 @@ public class Item {
         return weight;
     }
 
-    @Override
-    public String toString() {
-        return "Item{" +
-                "name='" + name + '\'' +
-                ", weight=" + weight +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Item{" +
+//                "name='" + name + '\'' +
+//                ", weight=" + weight +
+//                '}';
+//    }
 }
