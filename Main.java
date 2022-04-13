@@ -7,9 +7,6 @@ public class Main {
 
         Simulation simulation = new Simulation();
 
-//        File phase1File = new File("phase-1.txt");
-//        File phase2File = new File("phase-2.txt");
-
         List<Item> phase1Item = simulation.loadItems("phase-1.txt");
 //        System.out.println("phase1Item = " + phase1Item);
         List<Item> phase2Item = simulation.loadItems("phase-2.txt");
@@ -21,8 +18,8 @@ public class Main {
         System.out.println("Loading UOne rockets with Phase 2 Items");
         List<Rocket> phase1U2 = new ArrayList<Rocket>();
         phase1U2 = simulation.loadU1(phase2Item);
-        System.out.println("phase1U1 = " + phase1U1);
-        System.out.println("phase1U1 = " + phase1U1.size());
+//        System.out.println("phase1U1 = " + phase1U1);
+//        System.out.println("phase1U1 = " + phase1U1.size());
 
         System.out.println("Simulation U1: ");
         double trial = simulation.runSimulation(phase1U1);
