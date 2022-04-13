@@ -39,4 +39,3 @@ public class Rocket implements SpaceShip{
                 '}';
     }
 }
-//final - nie pozwala na nadpisanie pozniej
