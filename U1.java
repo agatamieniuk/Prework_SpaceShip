@@ -5,9 +5,9 @@ public class U1 extends Rocket {
     double chanceOfCrash;
 
     public U1() {
-        this.rocketCurrentWeight = 10000;
-        this.maxWeight = 18000;  //in kg - the same unit of measure as weight of equipment in txt files
-        this.weight = 10000;
+        this.rocketCurrentWeight = 10;
+        this.maxWeight = 18;
+        this.weight = 10;
         this.cost = 100;
     }
 
