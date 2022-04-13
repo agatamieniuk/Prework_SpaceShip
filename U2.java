@@ -1,12 +1,12 @@
 public class U2 extends Rocket{
 
-    double random = Math.random();
+    double random = (Math.random()*10000)+1;
     double chanceOfExplosion;
     double chanceOfCrash;
     public U2() {
-        this.rocketCurrentWeight = 18000;
-        this.maxWeight = 29000;  //in kg - the same unit of measure as weight of equipment in txt files
-        this.weight = 18000;
+        this.rocketCurrentWeight = 18;
+        this.maxWeight = 29;
+        this.weight = 18;
         this.cost = 120;
     }
 
