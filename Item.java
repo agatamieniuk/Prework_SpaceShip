@@ -1,11 +1,19 @@
 public class Item {
-    static String name;
-    static int weight;
+    String name;
+    int weight;
 
-    static String getName(){
+    String getName(){
         return name;
     }
-    static int getWeight(){
+    int getWeight(){
         return weight;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "name='" + name + '\'' +
+                ", weight=" + weight +
+                '}';
     }
 }
